@@ -56,7 +56,8 @@ class CartService{
   getPriceWithPromotion(numberOfIngredients, ingredient){
     if(this.ingredientsInPromotion.includes(ingredient) && numberOfIngredients % 3 == 0){
       let promotionalNumberOfIngredients = (numberOfIngredients / 3) * 2;
-      PubSub.publish('show-promotional-snack', `Já que você adicionou ${numberOfIngredients} unidades ao ingrediente ${ingredient}, você pagará por apenas ${promotionalNumberOfIngredients}! `);
+      if(numberOfIngredients > 0)
+        PubSub.publish('show-promotional-snack', `Já que você adicionou ${numberOfIngredients} unidades ao ingrediente ${ingredient}, você pagará por apenas ${promotionalNumberOfIngredients}! `);
       return promotionalNumberOfIngredients;
     }else{
       return numberOfIngredients;
