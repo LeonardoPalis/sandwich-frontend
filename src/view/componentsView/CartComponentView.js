@@ -86,10 +86,7 @@ class CartComponentView extends Component {
               </Typography>
             </Toolbar>
           </AppBar>
-          <List style={{maxHeight: 508, overflowY: "scroll"}}>
-            <ListItem button>
-              <ListItemText primary="Phone ringtone" secondary="Titania" />
-            </ListItem>
+          <List style={{maxHeight: 508, overflowY: "scroll",  marginTop: document.getElementById( "appBar") ? (document.getElementById( "appBar").clientHeight + 10) + "px" : "80px"}}>
             {
               this.state.sandwiches.map((sandwich, index)=>{
                 return (
