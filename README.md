@@ -1,4 +1,4 @@
-## Plataforma de sanduíches
+## Plataforma de sanduíches (Frontend)
 Frontend de uma plataforma para montagem e customização de sanduíches
   - Criado utilizando React, JavaScript ES6+, Material UI.
   
